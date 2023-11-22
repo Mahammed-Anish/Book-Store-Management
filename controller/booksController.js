@@ -29,8 +29,8 @@ exports.verifyLogin = async(req,res)=>{
             if(passwordMatch) {
                 req.session.user = existingEmail;
                 req.session.isLoggedIn = true;
-                res.send("Login successful");
-                // return res.redirect('/');
+                // res.send("Login successful");
+                return res.redirect('/');
             } else {
                 return res.send("Please enter valid credentials");
             }

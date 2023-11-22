@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+html {
+    background-image: url("./assets/new.jpg");
+    z-index: -1;
+}
+
+body {
+    color: #ccc;
+}
+
 .main h1 {
     text-align: center;
     padding-bottom: 6px;
@@ -12,7 +21,7 @@
 }
 
 .navbar {
-    background-color: wheat;   
+    /* background-color: wheat;    */
     padding: 8px;
     cursor: pointer;
 }
@@ -59,9 +68,12 @@ ul li {
 .search-input {
     width: 100%;
     padding: 7px;
+    color: #fff;
+    background-color: black;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    outline: none;
 }
   
 .search-button {
@@ -83,7 +95,9 @@ ul li {
     padding: 8px;
     border: 1px solid black;
     border-radius: 50%;
-    /* background-color: indianred; */
+    /* color: #fff; */
+    background-color: rgb(215, 61, 61);
+    /* background-color: auto; */
     /* background-color: rgb(18, 40, 211); */
 }
 
@@ -100,45 +114,21 @@ p {
     margin: 5px 0;
 }
 
-/* .books {
-    margin: 10px;
-    display: flex;
-}
-
-.book {
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 4px 4px 8px whitesmoke;
-} */
-
-/* .books {
-    display: flex;
-    justify-content: center;
-}
-
-.book-container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 900px; /* Adjust this value to your preference */
-    /* justify-content: space-between;
-    margin-top: 20px;
-} */
-
 .book {
     width: 30%; /* Set the width of each book */
     margin-bottom: 20px; /* Add some space between books */
     /* border: 1px solid #ccc; Add a border for visual separation */
     padding: 10px; /* Add some padding for better styling */
     box-sizing: border-box; /* Ensure padding is included in the width */
-    box-shadow: 4px 4px 8px rgba(255, 228, 196, 0.801);
+    /* box-shadow: 4px 4px 8px rgba(255, 228, 196, 0.801); */
+    box-shadow: 4px 4px 8px rgb(57, 57, 122);
+    transition: transform 0.5s ease;
 } 
 
-/* .button-container {
-    display: flex;
-    justify-content: center;
-} */
+.book:hover {
+    transform: translateY(-5px);
+    /* background-color: aqua; */
+}
 
 a {
     color: black;
@@ -159,10 +149,6 @@ a {
 }
 
 
-.book-info {
-    /* text-align: center; */
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -171,4 +157,8 @@ img {
 .button-container {
     display: flex;
     /* justify-content: center; */
+}
+
+.button-container button:hover {
+    background-color: rgb(19, 19, 173);
 }
