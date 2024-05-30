@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- <h3>Search Results</h3> -->
+    <div class="books">
+      <div class="book-container">
+        <% for(let book of results) { %>
+        <div class="book">
+          <div class="book-info">
+            <p>Name of the Book: <%= book.name %></p>
+            <p>Author: <%= book.author %></p>
+            <p>Edition: <%= book.edition %></p>
+            <p>Price: <%= book.price %></p>
+          </div>
+          <form action="/add-to-cart" method="POST">
+            <input type="hidden" name="_id" value="<%= book._id %>" />
+            <div class="button-container">
+              <button type="submit">Add to Cart</button>
+            </div>
+          </form>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>

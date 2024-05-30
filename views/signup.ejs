@@ -1,15 +1,25 @@
 <html>
-    <head>
-        <title>Sign Up Form</title>
-        <link rel="stylesheet" href="../static/signup.css">
-    </head>
-    <body>
-        <!-- <h1>Sign Up Form</h1> -->
-        <form action="/create-user" method="POST">
-            <input type="email" name="email" placeholder="Enter your Email">
-            <input type="text" name="name" placeholder="Enter your Name"/>
-            <input type="password" name="password" placeholder="Enter your password"/>
-            <button type="submit">SignUp</button>
-        </form>
-    </body>
+  <head>
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="/signup.css" />
+  </head>
+  <body>
+    <!-- <h1>Sign Up Form</h1> -->
+    <form action="/bookStore/addUser" method="POST">
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your Email"
+        required
+      />
+      <input type="text" name="name" placeholder="Enter your Name" required />
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+      />
+      <button type="submit">SignUp</button>
+    </form>
+  </body>
 </html>
