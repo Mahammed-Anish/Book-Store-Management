@@ -3,10 +3,10 @@ const router = express.Router();
 const controller = require("../controller/booksController");
 const bookCrudController = require("../middlewares/bookCrudController");
 
-router.get("/", controller.allBooks);
-router.get("/bookStore/signup", controller.registerForm);
-router.get("/bookStore/signin", controller.loginForm);
-router.post("/bookStore/addUser", controller.createUser);
+router.get("/", controller.getData);
+router.get("/signup", controller.registerForm);
+router.get("/signin", controller.loginForm);
+router.post("/create-user", controller.createUser);
 router.post("/verify-login", controller.verifyLogin);
 router.get("/update", controller.updateProfile);
 router.post("/submit", controller.saveUpdate);
@@ -21,5 +21,4 @@ router.post("/add-to-cart", bookCrudController.addToCart);
 router.get("/myCart", bookCrudController.viewCart);
 //  Create routes for registration, login, and user profile management.
 router.get("/profile", controller.getProfile);
-router.get("/search", bookCrudController.search);
 module.exports = router;

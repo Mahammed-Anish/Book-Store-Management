@@ -1,16 +1,21 @@
 <html>
   <head>
-    <title>Update Books</title>
+    <title>Add Books</title>
     <link rel="stylesheet" href="../static/addBooks.css" />
   </head>
   <body>
-    <!-- <h1>Update Books</h1> -->
-    <form action="/bookUpdate" method="post">
-      <input type="hidden" name="_method" value="put" />
+    <!-- <h1>Add Books</h1> -->
+    <form action="/bookAdd" method="post">
       <input
         type="text"
         name="name"
         placeholder="Enter the book name"
+        required
+      />
+      <input
+        type="text"
+        name="author"
+        placeholder="Enter the author name"
         required
       />
       <input
@@ -25,7 +30,7 @@
         placeholder="Enter the proce of book"
         required
       />
-      <button>Update Book</button>
+      <button>Add Book</button>
     </form>
   </body>
 </html>
