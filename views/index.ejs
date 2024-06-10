@@ -17,10 +17,12 @@
                 </ul>
                 <div class="flex">
                     <div class="search-container">
-                        <input type="text" class="search-input" placeholder="Search...">
-                        <button type="submit" class="search-button">
-                            <a href="/search.ejs"><i class="fa-solid fa-magnifying-glass icon"></i></a>
-                        </button>
+                        <form action="/search" method="get">
+                            <input type="text" class="search-input" name="query" placeholder="Search...">
+                            <button type="submit" class="search-button">
+                                <i class="fa-solid fa-magnifying-glass icon"></i>
+                            </button>
+                        </form>
                       </div>                      
                     <div class="profile-icon">
                         <a href="/profile"><i class="fa-solid fa-user"></i></a>

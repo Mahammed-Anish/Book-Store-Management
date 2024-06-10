@@ -178,3 +178,26 @@ exports.viewCart = async (req, res) => {
     return res.redirect("back");
   }
 };
+
+exports.search = async (req, res) => {
+  console.log(req.query);
+  // res.send("search success");
+  try {
+    if (!req.query || !req.query.query) {
+      return res.status(400).json({ error: "Query parameter is missing." });
+    }
+    let query = req.query.query;
+    // console.log("query:", query);
+
+    // const regex = new RegExp(query, "i");
+
+    // Perform the search on a specific field (e.g., 'name')
+    const results = await bookSchema.find({ name: new RegExp(query, "i") });
+    // console.log(results);
+    res.render("search", { results });
+    // res.send("success");
+  } catch (error) {
+    console.error("Error during search:", error);
+    return res.status(500).send({ error: "Internal Server Error" });
+  }
+};

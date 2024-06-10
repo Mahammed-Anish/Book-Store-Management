@@ -21,4 +21,5 @@ router.post("/add-to-cart", bookCrudController.addToCart);
 router.get("/myCart", bookCrudController.viewCart);
 //  Create routes for registration, login, and user profile management.
 router.get("/profile", controller.getProfile);
+router.get("/search", bookCrudController.search);
 module.exports = router;
